@@ -1,118 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0f14" />
-  <meta name="description" content="Reindell M. Almazan — Computer Science student and full-stack developer in the Philippines. Explore software, research, and digital design projects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Reindell Almazan — Full-Stack Developer & Digital Builder" />
-  <meta property="og:description" content="Thoughtful interfaces. Reliable systems. A portfolio of software, research, and digital design work." />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/259997476?v=4" />
-  <meta name="color-scheme" content="dark" />
-  <title>Reindell Almazan — Developer & Digital Builder</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1016">
+  <meta name="description" content="Reindell M. Almazan — backend-focused full-stack developer. Explore a manufacturing production tracking system and a health system project.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reindell Almazan — Backend-Focused Full-Stack Developer">
+  <meta property="og:description" content="Backend engineering. APIs. Databases. Practical full-stack systems.">
+  <meta property="og:url" content="https://reindell.github.io/">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://reindell.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Reindell Almazan — Backend-Focused Full-Stack Developer</title>
+  <style>
+    :root{--bg:#0b1016;--bg2:#0e161c;--surface:#131d25;--surface2:#18242d;--stroke:#27343c;--ink:#f2f4ef;--muted:#9ba9ac;--lime:#cbfc78;--lime2:#a8e64d;--cyan:#89d8d4;--radius:22px;--font:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--display:'Space Grotesk',system-ui,sans-serif}
+    *,*:before,*:after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{margin:0;background:var(--bg);font-family:var(--font);color:var(--ink);line-height:1.65;overflow-x:hidden}
+    a{color:inherit}button{font:inherit}img{max-width:100%;display:block}
+    ::selection{background:var(--lime);color:var(--bg)}
+    :focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+    .container{width:min(1160px,calc(100% - 48px));margin:0 auto}
+    .skip{position:absolute;top:-70px;left:18px;background:var(--lime);color:var(--bg);padding:12px 16px;z-index:50}.skip:focus{top:14px}
+    .site-header{position:sticky;top:0;z-index:30;border-bottom:1px solid rgba(141,170,173,.12);background:rgba(11,16,22,.84);backdrop-filter:blur(18px)}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+    .brand-icon{display:grid;place-items:center;background:var(--lime);color:#08110f;border-radius:12px;width:43px;height:43px;font-family:var(--display);font-size:26px;font-weight:700;line-height:1}
+    .brand-text{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.07em}.brand-text span{color:var(--muted);font-size:14px;letter-spacing:-.06em}
+    .nav-links{display:flex;align-items:center;gap:33px}.nav-links>a{text-decoration:none;font-size:13px;font-weight:700;color:#bdc9c9;transition:color .2s}.nav-links>a:hover{color:var(--lime)}
+    .nav-links .nav-contact{color:var(--lime);border:1px solid #527044;padding:10px 17px;border-radius:100px}
+    .menu-toggle{display:none;width:44px;height:44px;color:var(--ink);background:var(--surface);border:1px solid var(--stroke);border-radius:12px;cursor:pointer}
+    .menu-toggle svg{width:21px;height:21px;margin:auto}
+    .hero{position:relative;padding:97px 0 100px;isolation:isolate;overflow:hidden}
+    .hero:before{content:"";position:absolute;z-index:-1;width:850px;height:650px;right:-310px;top:-250px;background:radial-gradient(ellipse,#9ddc6333 0%,#78c49c0f 39%,transparent 70%);pointer-events:none}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(350px,.88fr);gap:74px;align-items:center}
+    .eyebrow{font-size:11px;font-weight:700;letter-spacing:.21em;display:flex;align-items:center;gap:12px;color:var(--lime);text-transform:uppercase}
+    .signal{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 5px rgba(203,252,120,.1)}
+    .hero h1{font-family:var(--display);font-size:clamp(44px,6vw,80px);line-height:1.07;letter-spacing:-.075em;margin:26px 0 24px;font-weight:700}
+    .hero h1 span{color:var(--lime)}
+    .hero-desc{max-width:600px;font-size:17px;line-height:1.83;color:var(--muted);margin:0}
+    .hero-desc strong{color:var(--ink);font-weight:600}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
+    .btn{display:inline-flex;gap:18px;align-items:center;justify-content:center;min-height:51px;padding:12px 22px;border-radius:13px;text-decoration:none;font-size:13px;font-weight:700;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-3px)}.btn-primary{background:var(--lime);color:#0b1311}.btn-primary:hover{background:#d9ff9f}.btn-secondary{border:1px solid #425058;background:#162127;color:#edf4ef}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:38px;font-size:12px;color:var(--muted);font-weight:600}.hero-meta span:before{content:"✦";color:var(--lime);margin-right:8px}
+    .hero-panel{position:relative;min-height:438px;border:1px solid #354b44;border-radius:25px;background:linear-gradient(140deg,#192b2a 0%,#121a22 58%,#0e141a 100%);overflow:hidden;box-shadow:0 38px 80px #0007}
+    .hero-panel:before{position:absolute;inset:0;content:"";background-image:linear-gradient(#d5e8dd0a 1px,transparent 1px),linear-gradient(90deg,#d5e8dd0a 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,black,transparent);pointer-events:none}
+    .panel-top{position:absolute;top:22px;left:26px;right:26px;display:flex;justify-content:space-between;font-size:10px;font-weight:700;letter-spacing:.14em;color:#becbca}
+    .panel-top span:nth-child(2){color:var(--lime)}
+    .panel-corner{position:absolute;top:94px;left:28px;font-size:11px;color:#a2c3b4;line-height:1.5;letter-spacing:.15em;font-weight:700}
+    .profile-photo{position:absolute;top:86px;left:50%;transform:translateX(-50%);width:206px;height:206px;border-radius:27px;overflow:hidden;background:linear-gradient(135deg,#d8ff9f 0%,#a8ec60 44%,#569f76 100%);border:7px solid #e7fae51d;box-shadow:0 24px 55px #0008;display:grid;place-items:center}
+    .photo-fallback{font-family:var(--display);font-size:111px;font-weight:700;color:#10261b}
+    .profile-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}.profile-photo img.loaded{opacity:1}
+    .profile-info{position:absolute;bottom:23px;left:23px;right:23px;border:1px solid #3e5551;background:rgba(14,25,28,.90);border-radius:16px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;backdrop-filter:blur(14px)}
+    .profile-info strong{display:block;font-family:var(--display);font-size:20px;letter-spacing:-.04em}.profile-info small{display:block;color:#b0c4be;margin-top:1px;font-size:11px}.profile-info .badge-icon{font-weight:700;border:1px solid #608560;border-radius:50%;display:grid;place-items:center;width:43px;height:43px;color:var(--lime);font-size:21px}
+    .expertise-strip{border-block:1px solid var(--stroke);background:#101920}
+    .expertise-strip-inner{display:flex;align-items:center;gap:32px;justify-content:space-between;min-height:91px}
+    .strip-label{font-size:10px;color:var(--lime);font-weight:700;letter-spacing:.18em;white-space:nowrap}.strip-tags{display:flex;gap:27px;flex-wrap:wrap;justify-content:center}.strip-tags span{font-family:var(--display);font-weight:700;font-size:14px;color:#b2c2c4;white-space:nowrap}.strip-tags span:before{content:"✳";color:#678f76;margin-right:25px}
+    section.section{padding:106px 0}
+    .section-header{display:flex;gap:40px;justify-content:space-between;align-items:end;margin-bottom:42px}
+    .section-label{color:var(--lime);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .section h2{font-family:var(--display);font-weight:700;font-size:clamp(36px,4.5vw,57px);letter-spacing:-.064em;line-height:1.12;margin:13px 0 0}
+    .section h2 em{font-style:normal;color:var(--lime)}
+    .section-header p{max-width:440px;color:var(--muted);font-size:14px;line-height:1.8;margin:0}
+    .work-list{display:grid;gap:24px}
+    .project{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:1px solid #33443d;border-radius:var(--radius);overflow:hidden;min-height:365px;transition:transform .22s,border-color .22s}
+    .project:hover{transform:translateY(-4px);border-color:#86ad60}
+    .project-copy{padding:42px 40px 39px;display:flex;flex-direction:column;align-items:start}
+    .project-index{color:var(--lime);font-size:11px;letter-spacing:.19em;font-weight:700}.project h3{font-family:var(--display);font-size:clamp(27px,3vw,35px);letter-spacing:-.054em;line-height:1.15;margin:20px 0 14px}.project p{font-size:14px;color:var(--muted);line-height:1.85;margin:0;max-width:470px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:25px}.chip{border:1px solid #3a4d4d;border-radius:100px;padding:5px 10px;font-size:10px;font-weight:700;color:#c6d7d3}
+    .project-note{margin-top:18px;font-size:11px;color:#9aacac}.project-note:before{content:"↗";color:var(--lime);margin-right:7px}
+    .project-visual{position:relative;min-height:365px;overflow:hidden;display:grid;place-items:center}
+    .production-visual{background:linear-gradient(135deg,#314d42,#1b3133 38%,#111a22)}
+    .production-visual:before,.health-visual:before{position:absolute;content:"";inset:0;background-image:linear-gradient(#eaffeb10 1px,transparent 1px),linear-gradient(90deg,#eaffeb10 1px,transparent 1px);background-size:32px 32px;opacity:.45}
+    .mock-window{width:min(87%,440px);min-height:252px;z-index:1;background:#101b24;border:1px solid #66847455;border-radius:11px;box-shadow:0 26px 60px #0007;overflow:hidden;transform:rotate(-2deg)}
+    .mock-bar{height:34px;border-bottom:1px solid #2c4144;display:flex;gap:6px;align-items:center;padding:0 12px}.mock-bar i{width:7px;height:7px;border-radius:50%;background:#5f7a76}.mock-bar i:first-child{background:#bddc76}.mock-bar small{margin-left:12px;font-size:8px;letter-spacing:.1em;color:#a2b5b3}
+    .mock-body{padding:17px 19px}.mock-title{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#ecf2ee;font-size:11px;font-weight:700}.mock-title span{font-size:8px;color:#a6c89c}
+    .mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.mock-stat{border:1px solid #30474a;background:#182b33;border-radius:7px;padding:11px}.mock-stat small{display:block;color:#9cb5b6;font-size:7px;letter-spacing:.06em}.mock-stat strong{font-family:var(--display);font-size:20px;color:var(--lime);display:block;line-height:1.4}
+    .mock-chart{border:1px solid #2d4947;border-radius:7px;margin-top:12px;height:94px;padding:9px;background:#13252b}.mock-chart svg{width:100%;height:100%}
+    .visual-caption{position:absolute;bottom:17px;right:18px;font-size:9px;letter-spacing:.13em;color:#c2d2c7;z-index:2;font-weight:700}
+    .health-visual{background:linear-gradient(130deg,#183f42 5%,#113036 60%,#122329)}
+    .health-window{position:relative;z-index:1;width:min(82%,360px);height:252px;border:1px solid #719b9570;border-radius:18px;background:#f3f8f1;transform:rotate(3deg);box-shadow:0 30px 70px #0008;padding:25px;display:flex;flex-direction:column;gap:18px}
+    .health-top{display:flex;align-items:center;justify-content:space-between;color:#1e5451;font-size:11px;font-weight:700}.health-plus{width:32px;height:32px;border-radius:10px;background:#d9f0e4;display:grid;place-items:center;font-size:22px}
+    .health-cross{font-family:var(--display);color:#135f58;font-size:31px;letter-spacing:-.06em;line-height:1.1;margin-top:13px}.health-lines i{display:block;background:#d5e5df;height:9px;border-radius:20px;width:100%;margin-bottom:11px}.health-lines i:nth-child(2){width:78%}.health-lines i:nth-child(3){width:58%}
+    .health-pill{margin-top:auto;display:inline-block;width:max-content;border-radius:100px;background:#cde8dc;color:#225f58;font-size:10px;font-weight:700;padding:7px 12px}
+    .stack-section{background:#101921;border-block:1px solid var(--stroke)}
+    .stack-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.stack-text p{margin:22px 0 0;color:var(--muted);font-size:15px;max-width:470px}
+    .skill-groups{display:grid;gap:12px}.skill-group{border:1px solid #33454a;border-radius:15px;padding:19px 21px;background:#17232c}.skill-group strong{display:block;font-family:var(--display);font-size:14px;margin-bottom:8px}.skill-group span{color:#a8bdbb;font-size:13px}
+    .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:85px}.about-text{color:var(--muted);font-size:15px}.about-text p:first-child{margin-top:0}.about-text strong{color:var(--ink)}
+    .about-facts{display:flex;flex-wrap:wrap;gap:14px;margin-top:23px}.fact{border:1px solid #3a4b4b;border-radius:100px;color:#d7e5df;font-size:11px;padding:7px 13px}
+    .contact-section{padding-bottom:130px!important}.contact-block{position:relative;background:linear-gradient(125deg,#253b31 0%,#1a292b 46%,#141f29 100%);border:1px solid #496349;border-radius:24px;padding:61px;overflow:hidden}.contact-block:after{content:"R";position:absolute;right:30px;bottom:-110px;font:700 390px/1 var(--display);letter-spacing:-.1em;color:#b0e76a12;pointer-events:none}
+    .contact-block h2{margin:13px 0 18px;max-width:700px}.contact-block p{color:#b3c8c1;margin:0 0 30px;max-width:600px}.contact-actions{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:2}
+    .footer{padding:28px 0;border-top:1px solid var(--stroke)}.footer-inner{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}.footer p{color:var(--muted);font-size:12px;margin:0}.footer a{color:var(--ink);text-decoration:none}.footer a:hover{color:var(--lime)}
+    @media(max-width:900px){.hero-inner{gap:35px;grid-template-columns:1fr 0.87fr}.hero h1{font-size:clamp(40px,6vw,60px)}.hero-panel{min-height:395px}.stack-grid{gap:35px}.about-grid{gap:30px}.project-copy{padding:32px}.expertise-strip-inner{flex-direction:column;align-items:start;gap:10px;padding:22px 0}.strip-tags{justify-content:start;gap:15px}.strip-tags span:before{margin-right:12px}}
+    @media(max-width:700px){.container{width:min(100% - 34px,1160px)}.nav{min-height:70px}.menu-toggle{display:grid;place-items:center}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:#101a22;padding:21px 24px 24px;border-bottom:1px solid var(--stroke);flex-direction:column;align-items:stretch;gap:17px;box-shadow:0 15px 35px #0006}.nav-links.open{display:flex}.nav-links>a{font-size:15px}.nav-links .nav-contact{width:max-content}.hero{padding:64px 0 65px}.hero-inner{grid-template-columns:1fr;gap:43px}.hero-panel{min-height:395px;width:min(100%,470px);margin:0 auto}.hero h1{font-size:clamp(42px,11vw,62px)}.hero-desc{font-size:15px}.hero-meta{gap:14px}.expertise-strip-inner{min-height:auto}.strip-tags span{font-size:12px}.strip-tags span:before{margin-right:7px}.section-header{display:block}.section-header p{margin-top:17px}.section.section{padding:72px 0}.project{grid-template-columns:1fr}.project-visual{min-height:300px;order:-1}.project-copy{padding:28px}.stack-grid,.about-grid{grid-template-columns:1fr;gap:29px}.contact-block{padding:37px 25px}.contact-section{padding-bottom:70px!important}.contact-block:after{font-size:260px;bottom:-60px}.footer-inner{align-items:flex-start;flex-direction:column;gap:9px}}
+    @media(max-width:400px){.brand-text{font-size:17px}.hero-actions .btn{width:100%}.profile-photo{width:190px;height:190px}.hero-panel{min-height:375px}.mock-window{width:90%}.mock-stat{padding:8px}.mock-stat strong{font-size:17px}.contact-actions .btn{width:100%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="top-glow" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Reindell Almazan, back to top"><span class="brand-symbol">r<span class="brand-dot">.</span></span><span class="brand-name">reindell<span class="brand-secondary">/dev</span></span></a>
-      <button class="mobile-menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Selected work</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-github" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Reindell portfolio home"><span class="brand-icon" aria-hidden="true">R</span><span class="brand-text">reindell<span>/dev</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#tech">Tech stack</a><a href="#about">About me</a><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="nav-contact" href="#contact">Contact me ↗</a></nav>
     </div>
   </header>
-
   <main id="main">
-    <section class="hero section" aria-labelledby="hero-heading">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="status-pulse"></span> OPEN TO BUILDING SOMETHING GREAT <span class="eyebrow-line"></span> <span class="eyebrow-index">01 / PORTFOLIO</span></div>
-          <p class="hero-overline">Hey, I'm Reindell <span aria-hidden="true">✳</span></p>
-          <h1 id="hero-heading">I build digital<br />things that <em>work.</em></h1>
-          <p class="hero-description">A Computer Science student, full-stack developer, and design-minded problem solver. I turn real-world challenges into useful software and thoughtful digital experiences.</p>
-          <div class="hero-actions">
-            <a href="#work" class="button button-primary">Explore my work <span class="button-icon" aria-hidden="true">↗</span></a>
-            <a href="#about" class="button button-ghost">A little about me <span aria-hidden="true">↓</span></a>
+    <section class="hero" aria-labelledby="hero-heading"><div class="container hero-inner">
+      <div>
+        <div class="eyebrow"><span class="signal" aria-hidden="true"></span>Backend-focused / Full-stack developer</div>
+        <h1 id="hero-heading">Building the logic <span>behind</span> great software.</h1>
+        <p class="hero-desc">Hey, I'm <strong>Reindell M. Almazan</strong> — a Computer Science student and full-stack developer with a strong interest in <strong>backend engineering</strong>, API development, and databases. I build practical systems that solve real problems.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="mailto:reindellalmazan29@gmail.com">Let's connect <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>Calamba, Philippines</span><span>Backend • APIs • Databases</span></div>
+      </div>
+      <div class="hero-panel" aria-label="Personal profile visual">
+        <div class="panel-top"><span>PROFILE / 001</span><span>HELLO_WORLD</span></div><div class="panel-corner">BUILD / TEST<br>SHIP / IMPROVE</div>
+        <div class="profile-photo"><span class="photo-fallback" aria-hidden="true">R</span><img id="profile-photo" src="profile-photo.jpg" alt="Portrait of Reindell M. Almazan" width="206" height="206"></div>
+        <div class="profile-info"><div><strong>Reindell Almazan</strong><small>Backend-focused Full-stack Developer</small></div><span class="badge-icon" aria-hidden="true">↗</span></div>
+      </div>
+    </div></section>
+    <div class="expertise-strip"><div class="container expertise-strip-inner"><div class="strip-label">WHAT I WORK WITH</div><div class="strip-tags"><span>NODE.JS</span><span>EXPRESS</span><span>POSTGRESQL</span><span>MONGODB</span><span>REST APIS</span><span>REACT</span></div></div></div>
+    <section id="projects" class="section" aria-labelledby="projects-heading"><div class="container">
+      <div class="section-header"><div><div class="section-label">/ 01 — Selected projects</div><h2 id="projects-heading">Real systems. <em>Real work.</em></h2></div><p>A focused selection of development projects, highlighting backend architecture, application workflows, and full-stack implementation.</p></div>
+      <div class="work-list">
+        <article class="project" aria-labelledby="production-title">
+          <div class="project-copy"><div class="project-index">01 / INDUSTRY TRAINING · INTERNAL APPLICATION</div><h3 id="production-title">Manufacturing Production Tracker</h3><p>A full-stack production operations system built for an internal manufacturing workflow. Designed around daily production records, target planning, reporting dashboards, role-aware access, and local-network deployment.</p><div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">REST APIs</span></div><div class="project-note">Internal project — sensitive source and operational data are not public</div></div>
+          <div class="project-visual production-visual" aria-label="Illustrative dashboard visual, not live operational data">
+            <div class="mock-window"><div class="mock-bar"><i></i><i></i><i></i><small>PRODUCTION / OVERVIEW</small></div><div class="mock-body"><div class="mock-title">Operations Dashboard <span>● SYSTEM VIEW</span></div><div class="mock-stats"><div class="mock-stat"><small>DAILY RECORDS</small><strong>01</strong></div><div class="mock-stat"><small>TARGET PLAN</small><strong>02</strong></div><div class="mock-stat"><small>REPORTING</small><strong>03</strong></div></div><div class="mock-chart"><svg viewBox="0 0 360 86" preserveAspectRatio="none" aria-hidden="true"><path d="M0 15H360M0 43H360M0 71H360" stroke="#2d4a4b" stroke-width="1"/><path d="M0 75 L36 60 L75 68 L112 37 L151 48 L190 19 L225 31 L263 12 L301 32 L336 9 L360 15" fill="none" stroke="#c9fa7a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div><span class="visual-caption">ILLUSTRATIVE UI / NOT LIVE DATA</span>
           </div>
-          <div class="hero-meta"><span><span class="meta-cross" aria-hidden="true">✺</span> Based in the Philippines</span><span><span class="meta-cross" aria-hidden="true">✺</span> Code · Design · Research</span></div>
-        </div>
-        <div class="hero-art" aria-label="Personal profile illustration with development-themed panels">
-          <div class="hero-art-grid" aria-hidden="true"></div>
-          <div class="orbit orbit-1" aria-hidden="true"></div><div class="orbit orbit-2" aria-hidden="true"></div>
-          <div class="hero-art-label hero-art-label-top">DESIGNING FOR HUMANS<br />BUILDING FOR IMPACT</div>
-          <div class="portrait-card">
-            <div class="portrait-upper"><span class="portrait-label">HELLO_WORLD</span><span class="portrait-star" aria-hidden="true">✳</span></div>
-            <img src="https://avatars.githubusercontent.com/u/259997476?v=4" alt="Reindell Almazan's GitHub profile photo" loading="eager" width="208" height="208" />
-            <div class="portrait-bottom"><strong>Reindell A.</strong><span>DEVELOPER / CREATIVE</span></div>
-          </div>
-          <div class="floating-pill floating-pill-left"><span class="pill-mark" aria-hidden="true">✦</span> Full-stack mindset</div>
-          <div class="floating-pill floating-pill-right"><span class="pill-mark" aria-hidden="true">↗</span> Design-driven</div>
-          <div class="hero-art-footer"><span>REAL PROBLEMS.</span><span>THOUGHTFUL SOLUTIONS.</span></div>
-        </div>
+        </article>
+        <article class="project" aria-labelledby="health-title">
+          <div class="project-copy"><div class="project-index">02 / SOFTWARE DEVELOPMENT · HEALTHCARE</div><h3 id="health-title">Health System</h3><p>A healthcare-focused software project I developed. This portfolio includes it as a featured project; the detailed architecture, feature list, and implementation notes will be added after the project source is available for review.</p><div class="chips"><span class="chip">Health technology</span><span class="chip">Application development</span><span class="chip">Project documentation pending</span></div><div class="project-note">Technical stack and implemented features to be verified</div></div>
+          <div class="project-visual health-visual" aria-label="Illustrative health software visual, not an actual system screenshot"><div class="health-window"><div class="health-top"><span>HEALTH SYSTEM</span><span class="health-plus" aria-hidden="true">+</span></div><div class="health-cross">Healthcare<br>software.</div><div class="health-lines" aria-hidden="true"><i></i><i></i><i></i></div><div class="health-pill">Project showcase</div></div><span class="visual-caption">ILLUSTRATIVE CONCEPT</span></div>
+        </article>
       </div>
-      <div class="container scroll-prompt"><span class="line-short" aria-hidden="true"></span> SCROLL TO EXPLORE <span aria-hidden="true">↓</span></div>
-    </section>
-
-    <div class="stack-strip" aria-label="Core technology and design interests"><div class="container stack-strip-inner"><span>THINGS I WORK WITH</span><div class="stack-words"><span>REACT</span><i aria-hidden="true">✳</i><span>NODE.JS</span><i aria-hidden="true">✳</i><span>POSTGRESQL</span><i aria-hidden="true">✳</i><span>VUE.JS</span><i aria-hidden="true">✳</i><span>UI / UX</span></div></div></div>
-
-    <section class="section about-section" id="about" aria-labelledby="about-heading">
-      <div class="container about-grid">
-        <div><div class="section-kicker"><span class="kicker-number">/ 01</span> THE PERSON BEHIND THE CODE</div><h2 id="about-heading" class="section-heading">Curiosity meets<br /><span class="text-lime">craft.</span></h2><div class="about-design" aria-hidden="true"><span class="design-asterisk">✳</span><span class="design-small">KEEP LEARNING<br />KEEP BUILDING</span></div></div>
-        <div class="about-copy"><p class="about-lead">I'm <strong>Reindell M. Almazan</strong>, a BS Computer Science student at Laguna College of Business and Arts (LCBA), with a passion for building software that solves practical problems.</p><p>My work spans full-stack applications, manufacturing workflow tools, academic prototypes, accessibility-focused research, and visual communication. I enjoy working at the intersection of <strong>engineering, usability, and design</strong> — from the database all the way to the final pixel.</p><p>Whether I'm planning a production dashboard, making a form easier to use, or designing intuitive digital experiences, my goal stays the same: make technology clear, useful, and approachable.</p><div class="about-facts"><div><span>FOCUS</span><strong>Full-stack development</strong></div><div><span>ALSO INTO</span><strong>Product & visual design</strong></div><div><span>EDUCATION</span><strong>BS Computer Science · LCBA</strong></div></div></div>
-      </div>
-    </section>
-
-    <section class="section work-section" id="work" aria-labelledby="work-heading">
-      <div class="container">
-        <div class="section-kicker"><span class="kicker-number">/ 02</span> WHAT I'VE BEEN WORKING ON</div>
-        <div class="section-heading-row"><div><h2 id="work-heading" class="section-heading">Selected <span class="text-lime">work.</span></h2><p class="section-subtext">A mix of systems, experiments, research, and design. Some projects are internal or academic, so the details shown here are public-safe summaries rather than released source code.</p></div><div class="work-count">9 <span>PROJECTS &<br />CREATIVE WORKS</span></div></div>
-        <div class="filter-bar" role="group" aria-label="Filter projects"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All work <span>9</span></button><button class="filter-button" type="button" data-filter="development" aria-pressed="false">Development <span>6</span></button><button class="filter-button" type="button" data-filter="research" aria-pressed="false">Research <span>1</span></button><button class="filter-button" type="button" data-filter="design" aria-pressed="false">Design <span>2</span></button></div>
-        <p class="sr-only" id="filter-announcement" role="status" aria-live="polite"></p>
-        <div class="project-grid" id="project-grid">
-          <article class="project-card project-card-wide" data-category="development" data-project="production">
-            <div class="project-visual visual-production"><div class="mock-browser"><div class="browser-bar"><span class="browser-dots">● ● ●</span><span>PRODUCTION OVERVIEW</span><span>◫</span></div><div class="mock-dash"><div class="dash-side"><span class="dash-logo">S<span>✳</span></span><span class="dash-nav on"></span><span class="dash-nav"></span><span class="dash-nav"></span><span class="dash-nav"></span></div><div class="dash-main"><div class="dash-heading"><span>DASHBOARD / OVERVIEW</span><small>OPERATIONS</small></div><div class="dash-stats"><div><small>DAILY OUTPUT</small><strong>01</strong><span class="dash-meter"></span></div><div><small>PRODUCTION PLAN</small><strong>02</strong><span class="dash-meter"></span></div><div><small>LINE SUMMARY</small><strong>03</strong><span class="dash-meter"></span></div></div><div class="dash-chart"><span>PRODUCTION TRENDS</span><svg viewBox="0 0 480 120" aria-hidden="true" preserveAspectRatio="none"><path d="M0 105H480 M0 68H480 M0 30H480" stroke="#283844" stroke-width="1"/><path d="M0 106 L42 82 L88 91 L135 43 L177 57 L230 24 L276 36 L323 16 L368 45 L414 12 L480 21" fill="none" stroke="#c2fb72" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 106 L42 82 L88 91 L135 43 L177 57 L230 24 L276 36 L323 16 L368 45 L414 12 L480 21 L480 120 L0 120Z" fill="url(#chartFade)"/><defs><linearGradient id="chartFade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bfff7a" stop-opacity=".22"/><stop offset="1" stop-color="#bfff7a" stop-opacity="0"/></linearGradient></defs></svg></div></div></div></div><span class="visual-corner">01 / FEATURED BUILD</span></div>
-            <div class="project-content"><div class="project-topline"><span>OJT · INTERNAL SYSTEM</span><span aria-hidden="true">↗</span></div><h3>Manufacturing Production Tracker</h3><p>A full-stack tool for production planning, operational records, and data visualization across manufacturing workflows. Built with role-aware screens, reporting views, and LAN-based access.</p><div class="project-bottom"><div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span></div><button class="project-detail" type="button" data-open-project="production">Project notes <span aria-hidden="true">↗</span></button></div></div>
-          </article>
-          <article class="project-card project-card-wide" data-category="research" data-project="accessibility">
-            <div class="project-visual visual-access"><div class="access-card"><div class="access-card-top"><span class="access-icon">✳</span><span>ACCESSIBILITY LAB / CONCEPT</span><span>Aa</span></div><div class="access-card-body"><div class="access-main"><span class="access-kicker">PERSONALIZED WEB EXPERIENCE</span><strong>Designing for<br />everyone<span>.</span></strong><div class="access-lines"><span></span><span></span><span></span></div></div><div class="access-options"><div><span>TEXT SIZE</span><b>A<span>+</span></b></div><div><span>CONTRAST</span><b>◐</b></div><div><span>PREFERENCE</span><b>✓</b></div></div></div></div><span class="visual-corner">02 / RESEARCH</span></div>
-            <div class="project-content"><div class="project-topline"><span>ACADEMIC · RESEARCH CONCEPT</span><span aria-hidden="true">↗</span></div><h3>AI-Driven Accessibility Recommendation System</h3><p>A research direction exploring personalized web accessibility settings, preference learning, and more inclusive interfaces for people with disabilities.</p><div class="project-bottom"><div class="tags"><span>AI / ML Concept</span><span>WCAG</span><span>Accessibility</span><span>UX Research</span></div><button class="project-detail" type="button" data-open-project="accessibility">Project notes <span aria-hidden="true">↗</span></button></div></div>
-          </article>
-          <article class="project-card" data-category="development" data-project="clinic"><div class="project-visual visual-small visual-clinic"><div class="micro-form"><span class="micro-form-heading">BOOK AN APPOINTMENT <b>+</b></span><i></i><i></i><div class="micro-duo"><i></i><i></i></div><div class="micro-form-action">REQUEST APPOINTMENT <span>→</span></div></div><span class="visual-corner">03 / VUE.JS</span></div><div class="project-content"><div class="project-topline"><span>ACADEMIC · FRONTEND</span><span aria-hidden="true">↗</span></div><h3>Clinic Appointment Request</h3><p>Interactive Vue form with validation, conditional fields, patient inputs, and appointment summaries.</p><div class="project-bottom"><div class="tags"><span>Vue 3</span><span>JavaScript</span><span>Forms</span></div><button class="project-detail" type="button" data-open-project="clinic">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="development" data-project="vue-lost"><div class="project-visual visual-small visual-lost"><div class="micro-list"><div class="micro-title"><b>Lost & Found</b><span>⌕</span></div><div class="micro-search"></div><div class="micro-item"><i>01</i><span></span><b>FOUND</b></div><div class="micro-item"><i>02</i><span></span><b>CLAIMED</b></div><div class="micro-item"><i>03</i><span></span><b>FOUND</b></div></div><span class="visual-corner">04 / VUE.JS</span></div><div class="project-content"><div class="project-topline"><span>ACADEMIC · FRONTEND</span><span aria-hidden="true">↗</span></div><h3>Lost & Found Item Tracker</h3><p>A searchable Vue interface for recording found items, tracking claims, and viewing dynamic totals.</p><div class="project-bottom"><div class="tags"><span>Vue 3</span><span>Arrays</span><span>Search</span></div><button class="project-detail" type="button" data-open-project="vue-lost">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="development" data-project="python-lost"><div class="project-visual visual-small visual-python"><div class="terminal-window"><div class="terminal-top"><span>● ● ●</span><span>lost_and_found.py</span></div><div class="terminal-lines"><span><b>class</b> LostAndFound:</span><span>&nbsp;&nbsp;<em>def</em> add_item(self):</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<i># record & track</i></span><span>&nbsp;&nbsp;<em>def</em> search(self):</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<i># find a match</i></span><span class="terminal-cursor">_</span></div></div><span class="visual-corner">05 / PYTHON</span></div><div class="project-content"><div class="project-topline"><span>ACADEMIC · APPLICATION</span><span aria-hidden="true">↗</span></div><h3>Python Lost-and-Found App</h3><p>A coursework application centered on structured record management and everyday item-tracking workflows.</p><div class="project-bottom"><div class="tags"><span>Python</span><span>CRUD</span><span>Logic</span></div><button class="project-detail" type="button" data-open-project="python-lost">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="development" data-project="employee"><div class="project-visual visual-small visual-employee"><div class="employee-ui"><div><span>EMPLOYEE RECORDS</span><b>+</b></div><div class="employee-row"><i></i><span></span><small></small></div><div class="employee-row"><i></i><span></span><small></small></div><div class="employee-row"><i></i><span></span><small></small></div></div><span class="visual-corner">06 / PHP + MYSQL</span></div><div class="project-content"><div class="project-topline"><span>PRACTICE · WEB APP</span><span aria-hidden="true">↗</span></div><h3>Employee Record System</h3><p>A database-backed employee management project exploring records, administrative workflows, and CRUD operations.</p><div class="project-bottom"><div class="tags"><span>PHP</span><span>MySQL</span><span>Web App</span></div><button class="project-detail" type="button" data-open-project="employee">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="development" data-project="razor"><div class="project-visual visual-small visual-razor"><div class="razor-ui"><div class="razor-circle">R</div><strong>Welcome back.</strong><span>Sign in to your dashboard</span><i></i><i></i><b>CONTINUE →</b></div><span class="visual-corner">07 / ASP.NET</span></div><div class="project-content"><div class="project-topline"><span>ACADEMIC · WEB APP</span><span aria-hidden="true">↗</span></div><h3>ASP.NET Login & Dashboard</h3><p>A Razor Pages mini-application exploring login flows, page structure, and a simple authenticated dashboard.</p><div class="project-bottom"><div class="tags"><span>ASP.NET</span><span>Razor Pages</span></div><button class="project-detail" type="button" data-open-project="razor">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="design" data-project="qr-menu"><div class="project-visual visual-small visual-qr"><div class="menu-sticker"><small>SCAN · EXPLORE · ENJOY</small><strong>OUR<br />MENU</strong><div class="nfc-qr menu-qr" aria-hidden="true"></div><span>SCAN ME ↗</span></div><span class="visual-corner">08 / CUSTOMER EXPERIENCE</span></div><div class="project-content"><div class="project-topline"><span>DESIGN · HOSPITALITY</span><span aria-hidden="true">↗</span></div><h3>QR Menu Table Stickers</h3><p>Tabletop scan-to-menu stickers designed to make menu discovery immediate and intuitive for café customers.</p><div class="project-bottom"><div class="tags"><span>QR Experience</span><span>Layout</span></div><button class="project-detail" type="button" data-open-project="qr-menu">Project notes ↗</button></div></div></article>
-          <article class="project-card" data-category="design" data-project="documents"><div class="project-visual visual-small visual-docs"><div class="doc-sheet"><div class="doc-header"><b>RBA<span>.</span></b><small>WORK DOCUMENT</small></div><strong>JOB REPORT</strong><i></i><i></i><i class="doc-half"></i><div class="doc-table"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="doc-sign">AUTHORIZATION / SIGNATURE</div></div><span class="visual-corner">09 / DOCUMENT DESIGN</span></div><div class="project-content"><div class="project-topline"><span>DESIGN · BUSINESS MATERIALS</span><span aria-hidden="true">↗</span></div><h3>Business Documents & Templates</h3><p>Branded quotation, job-report, and receipt layouts designed for clearer, reusable business documentation.</p><div class="project-bottom"><div class="tags"><span>Branding</span><span>Layout</span><span>PDF / Word</span></div><button class="project-detail" type="button" data-open-project="documents">Project notes ↗</button></div></div></article>
-        </div>
-        <div class="work-note"><span class="work-note-symbol" aria-hidden="true">✳</span><p><strong>More than a project list.</strong> These represent hands-on learning across frontend, backend, databases, research, and creative work. Source repositories and live demos can be linked as they become publicly available.</p><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">VIEW MY GITHUB ↗</a></div>
-      </div>
-    </section>
-
-    <section class="section expertise-section" id="expertise" aria-labelledby="expertise-heading"><div class="container"><div class="section-kicker"><span class="kicker-number">/ 03</span> HOW I GET THINGS DONE</div><div class="section-heading-row"><h2 id="expertise-heading" class="section-heading">Tools of the <span class="text-lime">trade.</span></h2><p class="section-subtext expertise-intro">I enjoy connecting the pieces — interface, logic, data, and the experience around them.</p></div><div class="expertise-grid"><article class="expertise-card"><div class="expertise-icon">&lt;/&gt;</div><h3>Frontend development</h3><p>Building responsive, approachable interfaces with attention to interaction and accessibility.</p><div class="skill-list"><span>React</span><span>Vue.js</span><span>JavaScript</span><span>HTML & CSS</span></div></article><article class="expertise-card"><div class="expertise-icon">{ }</div><h3>Backend & systems</h3><p>Designing workflows, APIs, application logic, and role-aware functionality.</p><div class="skill-list"><span>Node.js</span><span>Express</span><span>Python</span><span>PHP</span><span>ASP.NET</span></div></article><article class="expertise-card"><div class="expertise-icon">▤</div><h3>Databases & tooling</h3><p>Organizing application data and working across development environments.</p><div class="skill-list"><span>PostgreSQL</span><span>MySQL</span><span>Git / GitHub</span><span>VS Code</span></div></article><article class="expertise-card"><div class="expertise-icon">✳</div><h3>Design & product thinking</h3><p>Making complex experiences simpler through clear information hierarchy and visual communication.</p><div class="skill-list"><span>UI / UX</span><span>Responsive Design</span><span>Accessibility</span><span>Print & QR Design</span></div></article></div></div></section>
-
-    <section class="section approach-section" aria-labelledby="approach-heading"><div class="container approach-grid"><div><div class="section-kicker"><span class="kicker-number">/ 04</span> MY APPROACH</div><h2 id="approach-heading" class="section-heading">Practical first.<br /><span class="text-lime">Pixel-aware.</span></h2><p class="section-subtext">Strong products start with understanding the problem, not choosing a framework.</p></div><div class="approach-list"><div class="approach-item"><span>01</span><div><h3>Understand the workflow</h3><p>Clarify the users, their constraints, and what success actually looks like.</p></div><span aria-hidden="true">↗</span></div><div class="approach-item"><span>02</span><div><h3>Build the right foundation</h3><p>Connect interfaces, data, and logic in a way that's practical to maintain.</p></div><span aria-hidden="true">↗</span></div><div class="approach-item"><span>03</span><div><h3>Refine the experience</h3><p>Improve readability, interaction, responsiveness, and day-to-day usability.</p></div><span aria-hidden="true">↗</span></div></div></div></section>
-
-    <section class="section contact-section" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-inner"><div class="contact-top"><span>HAVE A PROJECT IN MIND?</span><span>LET'S MAKE IT HAPPEN ↗</span></div><h2 id="contact-heading">Let's build<br /><em>something good.</em></h2><p>I'm always interested in interesting problems, opportunities to collaborate, and better ways to build for people.</p><a class="button button-dark" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a><div class="contact-bottom"><span>REINDELL M. ALMAZAN</span><span>DEVELOPER · DESIGN-MINDED BUILDER</span></div></div></div></section>
+    </div></section>
+    <section class="section stack-section" id="tech" aria-labelledby="tech-heading"><div class="container stack-grid"><div class="stack-text"><div class="section-label">/ 02 — Tools & technologies</div><h2 id="tech-heading">Backend at heart.<br><em>Full-stack</em> in practice.</h2><p>My strongest interest is building the application logic behind the interface: APIs, data models, persistence, and reliable integrations. I also work across the frontend when a complete product needs to be delivered.</p></div><div class="skill-groups"><div class="skill-group"><strong>Backend engineering</strong><span>Node.js · Express · Server-side JavaScript · API development</span></div><div class="skill-group"><strong>Databases</strong><span>PostgreSQL · MongoDB · Data modeling · CRUD operations</span></div><div class="skill-group"><strong>Full-stack development</strong><span>React · JavaScript · Frontend-to-backend integration</span></div><div class="skill-group"><strong>Development workflow</strong><span>Git · GitHub · Testing & debugging · Windows/LAN deployments</span></div></div></div></section>
+    <section class="section" id="about" aria-labelledby="about-heading"><div class="container about-grid"><div><div class="section-label">/ 03 — About me</div><h2 id="about-heading">Curious builder.<br><em>Problem solver.</em></h2></div><div class="about-text"><p>I'm <strong>Reindell M. Almazan</strong>, a BS Computer Science student at <strong>Laguna College of Business and Arts</strong> in the Philippines.</p><p>I enjoy turning requirements into working applications, especially the behind-the-scenes parts: backend services, database structures, APIs, system integrations, and reliable business workflows. My experience with the manufacturing production tracker has helped me think about software in terms of real operators, data consistency, and practical deployment constraints.</p><p>I'm continually developing as a <strong>backend-focused full-stack developer</strong>, learning through real projects and improving the systems I build.</p><div class="about-facts"><span class="fact">BS Computer Science</span><span class="fact">Backend-focused</span><span class="fact">Full-stack development</span></div></div></div></section>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-block"><div class="section-label">/ 04 — Get in touch</div><h2 id="contact-heading">Have a system in mind?<br><em>Let's build it.</em></h2><p>Interested in discussing software projects, backend systems, APIs, or collaboration? You can contact me directly.</p><div class="contact-actions"><a class="btn btn-primary" href="mailto:reindellalmazan29@gmail.com">Email me ↗</a><a class="btn btn-secondary" href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="btn btn-secondary" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><div><a href="#top" class="footer-brand">r<span>.</span></a><span>Built with curiosity & a little caffeine.</span></div><div><span>© <span id="copyright-year">2026</span> Reindell Almazan</span><a href="#top">Back to top ↑</a></div></div></footer>
-
-  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-header"><span>PROJECT NOTES / <span id="dialog-type"></span></span><button type="button" id="dialog-close" aria-label="Close project notes">✕</button></div><div class="dialog-body"><p class="dialog-label" id="dialog-label"></p><h2 id="dialog-title"></h2><p id="dialog-summary"></p><h3>What I worked on</h3><ul id="dialog-highlights"></ul><p class="dialog-disclaimer" id="dialog-disclaimer"></p><div class="dialog-actions"><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a><button type="button" id="dialog-done">Close notes ↑</button></div></div></div></dialog>
+  <footer class="footer"><div class="container footer-inner"><p>© <span id="year">2026</span> Reindell M. Almazan. Built with care.</p><p><a href="mailto:reindellalmazan29@gmail.com">Email</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook</a> &nbsp;·&nbsp; <a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub</a></p></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.getElementById('nav-links');
+    function closeMenu(){navigation.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation menu');}
+    menuButton.addEventListener('click',()=>{const opened=navigation.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(opened));menuButton.setAttribute('aria-label',opened?'Close navigation menu':'Open navigation menu');});
+    navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+    const portrait=document.getElementById('profile-photo');
+    if(portrait.complete && portrait.naturalWidth>0)portrait.classList.add('loaded');
+    portrait.addEventListener('load',()=>portrait.classList.add('loaded'));
+    document.getElementById('year').textContent=String(new Date().getFullYear());
+  </script>
 </body>
 </html>
