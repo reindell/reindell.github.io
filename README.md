@@ -1,34 +1,14 @@
-# Reindell Almazan — Backend-Focused Full-Stack Developer
+# Reindell M. Almazan — Developer portfolio
 
-A public portfolio for **https://reindell.github.io/**.
+Static GitHub Pages website at https://reindell.github.io/
 
-## Publish the update
+## Included work
+- Featured projects: Manufacturing Production Tracker, AI-Integrated Health System, Employee Record System.
+- GitHub work: public application repositories, mobile/API projects, student record analyzer, and a separate technical-experiments archive.
+- Links to all 11 additional public repositories, including two that are currently empty.
 
-1. Open https://github.com/reindell/reindell.github.io/upload/main
-2. Upload **index.html** from this folder and commit the replacement.
-3. In GitHub Settings > Pages, verify `main` and `/(root)` are selected.
-4. When the deployment completes, hard-refresh https://reindell.github.io/ with Ctrl+Shift+R.
+## Publish
+Upload `index.html` and `profile-photo.jpg` to the root of the `reindell/reindell.github.io` GitHub repository. Avoid uploading a containing folder. GitHub Pages should publish from `main` / `(root)`.
 
-The entire site uses one self-contained HTML file with inline CSS and JavaScript. Old `styles.css`, `script.js`, and old `reindell-portfolio` folder are not required by this version.
-
-## Add the real profile photo
-
-Place your chosen photo in the GitHub repository root with the **exact filename `profile-photo.jpg`** (JPG format), alongside index.html. The page will automatically display it. Until uploaded, a clean capital-R placeholder appears. Your shared portrait was not available as a readable file during this update, so no appearance has been altered or substituted.
-
-## Project notes
-
-Only substantial development projects are featured:
-- Manufacturing Production Tracker — React, Node.js, Express, PostgreSQL, APIs. Internal project summary only; do not publish company data, source code, or confidential screenshots without approval.
-- Health System — feature list and stack intentionally left unverified pending source review. **Do not mislabel the old Vue clinic lab as this system.**
-
-Personal technologies include MongoDB and API development, but these are not attributed to the Health System without confirmation.
-
-## Contacts
-
-- Email: reindellalmazan29@gmail.com
-- Facebook: https://www.facebook.com/0900209002.r
-- GitHub: https://github.com/reindell
-
-## Accessibility
-
-Includes semantic sections, skip-to-content, keyboard-operable navigation, visible focus styles, reduced motion support, responsive layout, and fallback text for unloaded profile images.
+This is a static HTML site; no Node server or npm installation is needed.
+Some portfolio illustrations represent UI concepts rather than actual live screenshots. Internal production source code remains private.

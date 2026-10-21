@@ -110,6 +110,54 @@
     @media(max-width:680px){.container{width:calc(100% - 36px)}.nav{height:72px}.brand-mark{width:41px;height:41px;font-size:25px}.brand-name{font-size:18px}.nav-toggle{display:flex}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#111b21;border-bottom:1px solid #365246;padding:22px 18px 27px;box-shadow:0 18px 30px #0008;flex-direction:column;gap:20px;align-items:stretch}.nav-links.is-open{display:flex}.nav-links a{font-size:15px}.nav-links .nav-cta{text-align:center}.hero{padding:24px 0 61px}.hero-index{margin-bottom:26px;font-size:9px}.hero h1{font-size:clamp(46px,11vw,65px);margin:22px 0}.hero-description{font-size:15px}.hero-details{gap:9px 21px;margin-top:30px}.portrait-wrap{padding:14px}.portrait-label{font-size:9px}.portrait-frame{height:min(110vw,580px)}.portrait-text strong{font-size:24px}.stat-grid{grid-template-columns:1fr}.stat-cell{border-right:0;border-bottom:1px solid #293c34;padding:15px 0}.stat-cell:last-child{border-bottom:0}.stat-figure{width:54px;font-size:27px}.section{padding:76px 0}.section-top{margin-bottom:28px}.section-heading{font-size:clamp(35px,9vw,47px)}.secondary-projects{grid-template-columns:1fr;gap:17px}.compact-copy p{min-height:0}.skill-row{grid-template-columns:1fr;gap:9px;padding:17px 2px}.contact{padding-bottom:80px}.contact-box{padding:36px 26px}.contact-box h2{font-size:clamp(35px,9vw,48px)}.contact-actions .button{flex:1 1 auto}.footer-inner{flex-wrap:wrap}.footer-copy{order:3;width:100%}.footer-links{margin-left:auto}}
     @media(max-width:420px){.hero h1{font-size:46px}.hero-actions .button{width:100%}.hero-details{display:grid}.portrait-frame{height:450px}.portrait-text{left:17px;bottom:18px}.portrait-text strong{font-size:21px}.project-copy{padding:28px 23px}.project-copy h3{font-size:30px}.compact-copy{padding:25px 23px}.dashboard-preview{transform:none}.dash-body{padding:12px}.dash-title{font-size:12px}.dash-stat b{font-size:17px}.production-art{padding:19px;min-height:290px}.contact-box{padding:34px 23px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.compact-card{transition:none}}
+
+/* GitHub repositories — intentionally separate from featured professional projects */
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0,0,0,0);white-space:nowrap;overflow:hidden;padding:0;border:0}
+.github-section{background:#0d141a;position:relative;border-top:1px solid rgba(190,221,194,.10)}
+.github-section:before{content:"";position:absolute;left:-20vw;top:-80px;width:70vw;height:600px;background:radial-gradient(ellipse,rgba(199,247,132,.055),transparent 70%);pointer-events:none}
+.github-headline{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:22px}
+.github-summary{max-width:570px;color:var(--muted);margin:0;font-size:14px;line-height:1.8}
+.github-counters{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 27px}
+.github-counters span{display:inline-flex;gap:7px;align-items:center;padding:7px 12px;border:1px solid #2d3c38;border-radius:999px;color:#b3c4be;font-size:11px;letter-spacing:.01em}
+.github-counters strong{color:var(--lime);font-weight:800}
+.github-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 23px}
+.github-filter{cursor:pointer;color:#b1c0be;background:#141e25;border:1px solid #33403f;border-radius:9px;padding:10px 16px;font-size:12px;font-weight:800;transition:border .2s,background .2s,color .2s}
+.github-filter:hover{border-color:#7e996b;color:#fff}
+.github-filter[aria-pressed="true"]{color:#111b13;background:var(--lime);border-color:var(--lime)}
+.github-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gh-card{min-width:0;min-height:289px;padding:26px;display:flex;flex-direction:column;border:1px solid #33413e;border-radius:18px;background:linear-gradient(142deg,#17232a 0%,#111b21 92%);transition:transform .2s,border-color .2s,box-shadow .2s}
+.gh-card:hover{transform:translateY(-4px);border-color:#96b776;box-shadow:0 20px 45px rgba(0,0,0,.22)}
+.gh-card[hidden]{display:none!important}
+.gh-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
+.gh-card-id{color:#a2b4af;font-size:10px;font-weight:800;letter-spacing:.16em}
+.gh-card-icon{width:37px;height:37px;border-radius:11px;border:1px solid #516e5e;display:grid;place-items:center;color:var(--lime);font-family:var(--display);font-size:19px;font-weight:700}
+.gh-card h3{font-family:var(--display);font-size:clamp(20px,2.2vw,26px);letter-spacing:-.05em;line-height:1.22;margin:0 0 12px}
+.gh-card p{font-size:13px;line-height:1.76;margin:0;color:#aabbb9;max-width:570px}
+.gh-tags{display:flex;gap:7px;flex-wrap:wrap;margin:22px 0 20px}
+.gh-tags span{display:inline-block;border:1px solid #3b504c;border-radius:999px;color:#b8c9c2;font-size:10px;padding:5px 9px;white-space:nowrap}
+.gh-card-links{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:auto}
+.gh-card-links a{font-size:12px;font-weight:800;color:var(--lime);text-decoration:none;white-space:nowrap}
+.gh-card-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.github-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:21px 0 0;font-size:12px;color:var(--muted)}
+.github-bottom a{color:var(--lime);font-weight:800;text-decoration:none}
+.github-archive{margin-top:27px;border:1px solid #32413d;border-radius:18px;background:#121c22;overflow:hidden}
+.github-archive summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 26px;list-style:none;font-size:13px;font-weight:800;color:#e8eee7}
+.github-archive summary::-webkit-details-marker{display:none}
+.github-archive summary .archive-copy{display:block;color:#a2b4b0;font-weight:400;font-size:12px;margin-top:5px}
+.github-archive summary .archive-plus{width:30px;height:30px;border-radius:50%;border:1px solid #516457;display:grid;place-items:center;color:var(--lime);font-size:22px;flex:0 0 30px;transition:transform .2s}
+.github-archive[open] .archive-plus{transform:rotate(45deg)}
+.archive-list{padding:4px 26px 24px;border-top:1px solid #2d3b38}
+.archive-entry{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid #293733}
+.archive-entry:last-child{border-bottom:0}
+.archive-entry strong{font-size:13px;display:block;margin-bottom:4px}
+.archive-entry p{font-size:12px;line-height:1.6;color:#a3b6b1;margin:0}
+.archive-entry a{font-size:12px;font-weight:800;text-decoration:none;color:var(--lime);white-space:nowrap}
+.archive-entry a:hover{text-decoration:underline}
+.empty-repositories{margin:20px 0 0;font-size:12px;line-height:1.8;color:#99aaa6}
+.empty-repositories a{color:#c1d5c5;text-underline-offset:3px}
+@media(max-width:780px){.github-headline{display:block}.github-summary{margin-top:14px}.github-grid{grid-template-columns:1fr}.gh-card{min-height:260px}}
+@media(max-width:460px){.gh-card{padding:22px}.github-archive summary{padding:19px}.archive-list{padding:4px 19px 22px}.archive-entry{display:block}.archive-entry a{display:inline-block;margin-top:10px}.github-bottom{align-items:start;flex-direction:column}}
+
   </style>
 </head>
 <body>
@@ -118,7 +166,7 @@
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Reindell M. Almazan — home"><span class="brand-mark" aria-hidden="true">R</span><span class="brand-name">reindell<span>/dev</span></span></a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#stack">Tech stack</a><a href="#about">About</a><a class="nav-cta" href="#contact">Let's connect ↗</a></nav>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#github-work">GitHub work</a><a href="#stack">Tech stack</a><a href="#about">About</a><a class="nav-cta" href="#contact">Let's connect ↗</a></nav>
     </div>
   </header>
   <main id="main">
@@ -168,9 +216,41 @@
         </article>
         <article class="compact-card" aria-labelledby="project-employee"><div class="compact-art employee-art" aria-label="Illustrative employee management interface"><div class="employee-ui"><div class="employee-ui-head">Employee Records <span aria-hidden="true">✳</span></div><div class="employee-row"><i class="avatar"></i><div class="lines"><i></i><i></i></div><b>RECORD</b></div><div class="employee-row"><i class="avatar"></i><div class="lines"><i></i><i></i></div><b>RECORD</b></div><div class="employee-row"><i class="avatar"></i><div class="lines"><i></i><i></i></div><b>RECORD</b></div></div></div><div class="compact-copy"><span class="project-number">03 / WEB APPLICATION</span><h3 id="project-employee">Employee Record System</h3><p>A database-backed web application for organizing and maintaining employee records, developed with PHP and MySQL.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Database CRUD</span></div></div></article>
       </div></div></section>
-    <section class="section stack" id="stack" aria-labelledby="stack-heading"><div class="container stack-layout"><div class="stack-copy"><span class="section-label">/ 02 — Technical toolbox</span><h2 class="section-heading" id="stack-heading">Built across <span>the stack.</span></h2><p>My experience spans web interfaces, APIs, application logic, data storage, and AI-assisted features. I enjoy connecting each layer into useful, practical software.</p></div><div class="skill-table" aria-label="Technologies I use"><div class="skill-row"><strong>Frontend</strong><span>React, Vite, JavaScript, HTML, CSS</span></div><div class="skill-row"><strong>Backend & APIs</strong><span>Node.js, Express, REST API design and integration, PHP</span></div><div class="skill-row"><strong>Databases</strong><span>PostgreSQL, MongoDB, MySQL</span></div><div class="skill-row"><strong>AI & data</strong><span>Google AI Studio, AI feature development, working with datasets</span></div><div class="skill-row"><strong>Tools & deployment</strong><span>Git, GitHub, VS Code, Windows LAN environments</span></div></div></div></section>
-    <section class="section" id="about" aria-labelledby="about-heading"><div class="container about-layout"><div><span class="section-label">/ 03 — About me</span><h2 class="section-heading" id="about-heading">Curious about <span>what's next.</span></h2></div><div class="about-body"><p class="about-lead">I'm a 4th-year BS Computer Science student at Laguna College of Business and Arts in Calamba, Philippines.</p><p>I'm interested in the full process of software development — understanding the problem, shaping the database and backend, connecting the frontend, then testing and improving the end result. I like building tools that people can actually use.</p><p>Working on an internal manufacturing tracker has given me hands-on experience with production workflows, user roles, data handling, dashboards and deployment constraints. I continue to expand that experience through web, database-driven, and AI-integrated projects.</p><div class="about-chips"><span>4th-year BS Computer Science</span><span>Full-Stack Developer</span><span>Practical problem solver</span></div></div></div></section>
-    <section class="section contact" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-box"><span class="section-label">/ 04 — Contact</span><h2 id="contact-heading">Let's build <span>something useful.</span></h2><p>Have a project, an idea, or an opportunity to collaborate? You can reach me through email, Facebook or GitHub.</p><div class="contact-actions"><a class="button button-primary" href="mailto:reindellalmazan29@gmail.com">Email me ↗</a><a class="button button-secondary" href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="button button-secondary" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
+<section class="section github-section" id="github-work" aria-labelledby="github-heading">
+  <div class="container">
+    <div class="github-headline"><div><span class="section-label">/ 02 — Open-source & GitHub</span><h2 class="section-heading" id="github-heading">More builds on <span>GitHub.</span></h2></div><p class="github-summary">Browse source-backed projects from my GitHub account. Application work appears first; smaller class exercises are organized separately below. Each link opens the actual repository.</p></div>
+    <div class="github-counters" aria-label="GitHub repository summary"><span><strong>12</strong> Public repositories including this site</span><span><strong>9</strong> Repositories containing code</span><span><strong>2</strong> Empty repositories</span></div>
+    <div class="github-filters" role="group" aria-label="Filter GitHub projects"><button class="github-filter" type="button" data-gh-filter="all" aria-pressed="true">All applications</button><button class="github-filter" type="button" data-gh-filter="web" aria-pressed="false">Web</button><button class="github-filter" type="button" data-gh-filter="mobile" aria-pressed="false">Mobile &amp; API</button><button class="github-filter" type="button" data-gh-filter="python" aria-pressed="false">Python</button></div>
+    <p id="github-filter-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+    <div class="github-grid"><article class="gh-card" data-gh-group="web" aria-label="Hotel Reservation & Billing">
+    <div class="gh-card-top"><span class="gh-card-id">REPOSITORY / 01</span><span class="gh-card-icon" aria-hidden="true">H</span></div>
+    <h3>Hotel Reservation & Billing</h3><p>The Meridian — a browser-based front-desk tool for managing reservations, guests, billing and payments. Includes search, filters, occupancy/revenue dashboards, and browser-local data persistence.</p>
+    <div class="gh-tags"><span>JavaScript</span><span>HTML/CSS</span><span>LocalStorage</span><span>Billing</span></div><div class="gh-card-links"><a href="https://github.com/reindell/modern-javascript-hotel-reservation" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+  </article><article class="gh-card" data-gh-group="web" aria-label="Champoccino Digital Menu">
+    <div class="gh-card-top"><span class="gh-card-id">REPOSITORY / 02</span><span class="gh-card-icon" aria-hidden="true">C</span></div>
+    <h3>Champoccino Digital Menu</h3><p>Mobile-first café menu with category and drink-size filters, an editable order summary, and staff-facing order confirmation. Built as a fast, static site that can run on GitHub Pages.</p>
+    <div class="gh-tags"><span>JavaScript</span><span>HTML/CSS</span><span>Responsive UI</span><span>GitHub Pages</span></div><div class="gh-card-links"><a href="https://github.com/reindell/champoccino" target="_blank" rel="noopener noreferrer">View repository ↗</a><a href="https://reindell.github.io/champoccino/" target="_blank" rel="noopener noreferrer">Live site ↗</a></div>
+  </article><article class="gh-card" data-gh-group="mobile" aria-label="Smart Order Management System">
+    <div class="gh-card-top"><span class="gh-card-id">REPOSITORY / 03</span><span class="gh-card-icon" aria-hidden="true">O</span></div>
+    <h3>Smart Order Management System</h3><p>A mobile food-ordering project with a Flutter frontend and a Laravel REST API. Source includes login and registration flows, food listings, cart management, profile updates, and order endpoints.</p>
+    <div class="gh-tags"><span>Flutter / Dart</span><span>Laravel</span><span>PHP</span><span>MySQL</span><span>REST API</span></div><div class="gh-card-links"><a href="https://github.com/reindell/Flutter-Dart-Laravel-API-Final-Exam" target="_blank" rel="noopener noreferrer">Flutter app ↗</a><a href="https://github.com/reindell/Laravel-Final-Exam" target="_blank" rel="noopener noreferrer">Laravel API ↗</a></div>
+  </article><article class="gh-card" data-gh-group="mobile" aria-label="Flutter Mobile App">
+    <div class="gh-card-top"><span class="gh-card-id">REPOSITORY / 04</span><span class="gh-card-icon" aria-hidden="true">M</span></div>
+    <h3>Flutter Mobile App</h3><p>An exploratory Flutter application with login and registration screens plus a multi-tab layout for a menu, orders, and profile. Presented as a mobile prototype rather than a production service.</p>
+    <div class="gh-tags"><span>Flutter</span><span>Dart</span><span>Mobile UI</span><span>Prototype</span></div><div class="gh-card-links"><a href="https://github.com/reindell/MOBILEAPPPALMAZAN" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+  </article><article class="gh-card" data-gh-group="python" aria-label="Student Record Analyzer">
+    <div class="gh-card-top"><span class="gh-card-id">REPOSITORY / 05</span><span class="gh-card-icon" aria-hidden="true">P</span></div>
+    <h3>Student Record Analyzer</h3><p>A Python analysis utility that processes grades across multiple text files. Compares sequential, multithreaded, and multiprocessing execution and checks that their statistics match.</p>
+    <div class="gh-tags"><span>Python</span><span>Threading</span><span>Multiprocessing</span><span>File Processing</span></div><div class="gh-card-links"><a href="https://github.com/reindell/student-record-analyzer" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+  </article></div>
+    <div class="github-bottom"><span>These projects are linked to their source repositories. Some were created as academic assignments or prototypes.</span><a href="https://github.com/reindell?tab=repositories" target="_blank" rel="noopener noreferrer">All GitHub repositories ↗</a></div>
+    <details class="github-archive"><summary><span>Programming exercises &amp; technical experiments<span class="archive-copy">Three additional repositories · Python concurrency and file processing</span></span><span class="archive-plus" aria-hidden="true">+</span></summary><div class="archive-list"><div class="archive-entry"><div><strong>Investigating Race Conditions Using Python Threads</strong><p>Python lab investigating race conditions and thread synchronization using threading.Lock.</p></div><a href="https://github.com/reindell/Investigating-Race-Conditions-Using-Python-Threads" target="_blank" rel="noopener noreferrer">Repository ↗</a></div><div class="archive-entry"><div><strong>Multi-threaded File Copier & Matrix Multiplication</strong><p>Python coursework comparing sequential copying with threading and matrix multiplication with multiprocessing.</p></div><a href="https://github.com/reindell/Laboratory-Activity-3-Multi-threaded-File-Copier" target="_blank" rel="noopener noreferrer">Repository ↗</a></div><div class="archive-entry"><div><strong>Parallel File Processing Examination</strong><p>Python exercise analyzing text files with sequential, threaded, and multiprocessing workflows.</p></div><a href="https://github.com/reindell/Laboratory-Practical-Examination-" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></details>
+    <p class="empty-repositories">Also on GitHub: <a href="https://github.com/reindell/Thesis-" target="_blank" rel="noopener noreferrer">Thesis-</a> and <a href="https://github.com/reindell/MidtermExam" target="_blank" rel="noopener noreferrer">MidtermExam</a> are currently empty repositories, so there are no code-based project descriptions for them yet. The remaining repository is this portfolio.</p>
+  </div>
+</section>
+    <section class="section stack" id="stack" aria-labelledby="stack-heading"><div class="container stack-layout"><div class="stack-copy"><span class="section-label">/ 03 — Technical toolbox</span><h2 class="section-heading" id="stack-heading">Built across <span>the stack.</span></h2><p>My experience spans web interfaces, APIs, application logic, data storage, and AI-assisted features. I enjoy connecting each layer into useful, practical software.</p></div><div class="skill-table" aria-label="Technologies I use"><div class="skill-row"><strong>Frontend</strong><span>React, Vite, JavaScript, HTML, CSS</span></div><div class="skill-row"><strong>Backend & APIs</strong><span>Node.js, Express, REST API design and integration, PHP</span></div><div class="skill-row"><strong>Databases</strong><span>PostgreSQL, MongoDB, MySQL</span></div><div class="skill-row"><strong>AI & data</strong><span>Google AI Studio, AI feature development, working with datasets</span></div><div class="skill-row"><strong>Tools & deployment</strong><span>Git, GitHub, VS Code, Windows LAN environments</span></div></div></div></section>
+    <section class="section" id="about" aria-labelledby="about-heading"><div class="container about-layout"><div><span class="section-label">/ 04 — About me</span><h2 class="section-heading" id="about-heading">Curious about <span>what's next.</span></h2></div><div class="about-body"><p class="about-lead">I'm a 4th-year BS Computer Science student at Laguna College of Business and Arts in Calamba, Philippines.</p><p>I'm interested in the full process of software development — understanding the problem, shaping the database and backend, connecting the frontend, then testing and improving the end result. I like building tools that people can actually use.</p><p>Working on an internal manufacturing tracker has given me hands-on experience with production workflows, user roles, data handling, dashboards and deployment constraints. I continue to expand that experience through web, database-driven, and AI-integrated projects.</p><div class="about-chips"><span>4th-year BS Computer Science</span><span>Full-Stack Developer</span><span>Practical problem solver</span></div></div></div></section>
+    <section class="section contact" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-box"><span class="section-label">/ 05 — Contact</span><h2 id="contact-heading">Let's build <span>something useful.</span></h2><p>Have a project, an idea, or an opportunity to collaborate? You can reach me through email, Facebook or GitHub.</p><div class="contact-actions"><a class="button button-primary" href="mailto:reindellalmazan29@gmail.com">Email me ↗</a><a class="button button-secondary" href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="button button-secondary" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
   <footer class="footer"><div class="container footer-inner"><a href="#top" class="footer-brand"><span class="footer-logo" aria-hidden="true">R</span> reindell / developer</a><div class="footer-links"><a href="mailto:reindellalmazan29@gmail.com">Email</a><a href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub</a></div><span class="footer-copy">© <span id="year">2026</span> Reindell M. Almazan.</span></div></footer>
   <script>
@@ -187,5 +267,23 @@
       const year=document.getElementById('year');if(year)year.textContent=String(new Date().getFullYear());
     })();
   </script>
+<script>
+  (() => {
+    const buttons=[...document.querySelectorAll('[data-gh-filter]')];
+    const cards=[...document.querySelectorAll('[data-gh-group]')];
+    const status=document.getElementById('github-filter-status');
+    buttons.forEach(button=>button.addEventListener('click',()=>{
+      const filter=button.dataset.ghFilter;
+      let count=0;
+      for(const card of cards){
+        const visible=filter==='all'||card.dataset.ghGroup===filter;
+        card.hidden=!visible;
+        if(visible)count++;
+      }
+      buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+      if(status)status.textContent=`Showing ${count} ${count===1?'project':'projects'} in ${button.textContent.trim()}.`;
+    }));
+  })();
+</script>
 </body>
 </html>
