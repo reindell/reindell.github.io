@@ -49,13 +49,6 @@ const projects = {
     highlights: ['Practiced Razor Pages page structure and navigation.', 'Explored basic login and dashboard screens.', 'Developed familiarity with the ASP.NET application model.'],
     disclaimer: 'Academic mini-application, not a public authentication service.'
   },
-  nfc: {
-    category: 'Design', label: 'Design / NFC and QR touchpoints',
-    title: 'NFC & QR Review Cards',
-    summary: 'Customizable visual designs for physical cards and standees that help customers reach a business review or social page through a tap or scan.',
-    highlights: ['Designed 120 × 120 mm concepts pairing a QR area with a tap-to-rate interaction.', 'Created variations for Google reviews and Facebook pages.', 'Considered visual hierarchy, print readability, and clear call-to-action wording.'],
-    disclaimer: 'Graphic shown here is an illustrative layout, not a working scannable QR code. Individual customer links are intentionally omitted.'
-  },
   'qr-menu': {
     category: 'Design', label: 'Design / Tabletop QR experience',
     title: 'QR Menu Table Stickers',
