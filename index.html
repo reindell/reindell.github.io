@@ -120,6 +120,11 @@
 
 
 
+  
+    /* Contact email fallback: keyboard/touch friendly and mobile-safe */
+    .contact-actions .copy-email{cursor:pointer;font:700 13px/1.5 var(--font)}
+    .copy-email-status{min-height:1.4em;margin:11px 0 0!important;font-size:13px!important;color:#d1fc93!important}
+    @media(max-width:480px){.contact-actions .copy-email{flex:1 1 100%}}
   </style>
 </head>
 <body>
@@ -139,7 +144,7 @@
           <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>FULL-STACK DEVELOPER</div>
           <h1 id="hero-heading"><span class="line">Making ideas</span><span class="line accent">work in code.</span></h1>
           <p class="hero-description">Hey, I'm <strong>Reindell M. Almazan</strong> — a <strong>full-stack developer</strong> and <strong>4th-year BS Computer Science student</strong>. I build practical web applications, connect frontend experiences with APIs, and work with databases to turn requirements into working software.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="mailto:reindellalmazan29@gmail.com">Contact me <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#contact">Contact me <span aria-hidden="true">↗</span></a></div>
           <div class="hero-details"><span>Calamba, Laguna, Philippines</span><span>React · Node.js · Databases</span></div>
         </div>
         <div class="portrait-wrap" aria-label="Profile photo of Reindell M. Almazan">
@@ -180,9 +185,9 @@
       </div></div></section>
     <section class="section stack" id="stack" aria-labelledby="stack-heading"><div class="container stack-layout"><div class="stack-copy"><span class="section-label">/ 02 — Technical toolbox</span><h2 class="section-heading" id="stack-heading">Built across <span>the stack.</span></h2><p>My experience spans web interfaces, APIs, application logic, data storage, and AI-assisted features. I enjoy connecting each layer into useful, practical software.</p></div><div class="skill-table" aria-label="Technologies I use"><div class="skill-row"><strong>Frontend</strong><span>React, Vite, JavaScript, HTML, CSS</span></div><div class="skill-row"><strong>Backend & APIs</strong><span>Node.js, Express, REST API design and integration, PHP</span></div><div class="skill-row"><strong>Databases</strong><span>PostgreSQL, MongoDB, MySQL</span></div><div class="skill-row"><strong>AI & data</strong><span>Google AI Studio, AI feature development, working with datasets</span></div><div class="skill-row"><strong>Tools & deployment</strong><span>Git, GitHub, VS Code, Windows LAN environments</span></div></div></div></section>
     <section class="section" id="about" aria-labelledby="about-heading"><div class="container about-layout"><div><span class="section-label">/ 03 — About me</span><h2 class="section-heading" id="about-heading">Curious about <span>what's next.</span></h2></div><div class="about-body"><p class="about-lead">I'm a 4th-year BS Computer Science student at Laguna College of Business and Arts in Calamba, Philippines.</p><p>I'm interested in the full process of software development — understanding the problem, shaping the database and backend, connecting the frontend, then testing and improving the end result. I like building tools that people can actually use.</p><p>Working on an internal manufacturing tracker has given me hands-on experience with production workflows, user roles, data handling, dashboards and deployment constraints. I continue to expand that experience through web, database-driven, and AI-integrated projects.</p><div class="about-chips"><span>4th-year BS Computer Science</span><span>Full-Stack Developer</span><span>Practical problem solver</span></div></div></div></section>
-    <section class="section contact" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-box"><span class="section-label">/ 04 — Contact</span><h2 id="contact-heading">Let's build <span>something useful.</span></h2><p>Have a project, an idea, or an opportunity to collaborate? You can reach me through email, Facebook, or my GitHub profile.</p><div class="contact-actions"><a class="button button-primary" href="mailto:reindellalmazan29@gmail.com">Email me ↗</a><a class="button button-secondary" href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="button button-secondary" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer" aria-label="Visit Reindell’s GitHub profile">GitHub ↗</a></div></div></div></section>
+    <section class="section contact" id="contact" aria-labelledby="contact-heading"><div class="container"><div class="contact-box"><span class="section-label">/ 04 — Contact</span><h2 id="contact-heading">Let's build <span>something useful.</span></h2><p>Have a project, an idea, or an opportunity to collaborate? You can reach me through email, Facebook, or my GitHub profile.</p><div class="contact-actions"><a class="button button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=reindellalmazan29@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Compose an email to Reindell in Gmail (opens new tab)">Email me ↗</a><button class="button button-secondary copy-email" type="button" id="copy-email" aria-describedby="copy-email-status">Copy email</button><a class="button button-secondary" href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="button button-secondary" href="https://github.com/reindell" target="_blank" rel="noopener noreferrer" aria-label="Visit Reindell’s GitHub profile">GitHub ↗</a></div><p class="copy-email-status" id="copy-email-status" role="status" aria-live="polite"></p></div></div></section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><a href="#top" class="footer-brand"><span class="footer-logo" aria-hidden="true">R</span> reindell / developer</a><div class="footer-links"><a href="mailto:reindellalmazan29@gmail.com">Email</a><a href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub</a></div><span class="footer-copy">© <span id="year">2026</span> Reindell M. Almazan.</span></div></footer>
+  <footer class="footer"><div class="container footer-inner"><a href="#top" class="footer-brand"><span class="footer-logo" aria-hidden="true">R</span> reindell / developer</a><div class="footer-links"><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=reindellalmazan29@gmail.com" target="_blank" rel="noopener noreferrer">Email</a><a href="https://www.facebook.com/0900209002.r" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://github.com/reindell" target="_blank" rel="noopener noreferrer">GitHub</a></div><span class="footer-copy">© <span id="year">2026</span> Reindell M. Almazan.</span></div></footer>
   <script>
     (()=>{
       const toggle=document.getElementById('nav-toggle');
@@ -193,6 +198,32 @@
         nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
         document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
         document.addEventListener('click',e=>{if(nav.classList.contains('is-open')&&!nav.contains(e.target)&&!toggle.contains(e.target))close();});
+      }
+
+      const copyEmailButton=document.getElementById('copy-email');
+      const copyEmailStatus=document.getElementById('copy-email-status');
+      if(copyEmailButton&&copyEmailStatus){
+        copyEmailButton.addEventListener('click',async()=>{
+          const address='reindellalmazan29@gmail.com';
+          let copied=false;
+          try{
+            if(navigator.clipboard && window.isSecureContext){
+              await navigator.clipboard.writeText(address);
+              copied=true;
+            }else{
+              const textArea=document.createElement('textarea');
+              textArea.value=address;
+              textArea.style.position='fixed';textArea.style.left='-9999px';
+              document.body.appendChild(textArea);
+              textArea.select();
+              copied=document.execCommand('copy');
+              textArea.remove();
+            }
+          }catch(error){copied=false;}
+          copyEmailStatus.textContent=copied?'Email copied: '+address:'Copy this email address: '+address;
+          if(!copied)copyEmailStatus.setAttribute('tabindex','-1');
+          if(!copied)copyEmailStatus.focus();
+        });
       }
       const year=document.getElementById('year');if(year)year.textContent=String(new Date().getFullYear());
     })();
