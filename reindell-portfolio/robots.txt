@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://reindell.github.io/My-own-website/sitemap.xml
